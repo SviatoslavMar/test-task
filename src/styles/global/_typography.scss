@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Epiloque-Bold";
+  font-display: fallback;
+  font-style: normal;
+  src: url("./fonts/Epilogue-Bold.ttf") format("ttf"),
+    url("./fonts/Epilogue-Bold.woff2") format("woff2"),
+    url("./fonts/Epilogue-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Epiloque-Regular";
+  font-display: fallback;
+  font-style: normal;
+  src: url("./fonts/Epilogue-Regular.ttf") format("ttf"),
+  url("./fonts/Epilogue-Regular.woff2") format("woff2"),
+  url("./fonts/Epilogue-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  font-display: fallback;
+  font-style: normal;
+  src: url("./fonts/OpenSans-Regular.ttf") format("ttf"),
+  url("./fonts/OpenSans-Regular.woff2") format("woff2"),
+  url("./fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  font-display: fallback;
+  font-style: normal;
+  src: url("./fonts/OpenSans-Bold.ttf") format("ttf"),
+  url("./fonts/OpenSans-Bold.woff2") format("woff2"),
+  url("./fonts/OpenSans-Bold.woff") format("woff");
+}
+
+$font-heading: "Epiloque-Bold", "Georgia", serif;
+$font-heading-small: "Epiloque-Regular", sans-serif;
+$font-body: "OpenSans-Regular", sans-serif;
+
+body {
+  font-family: $font-body;
+  font-size: 1.6rem;
+  color: $black;
+}
+
+h1, h2, h3 {
+  font-family: $font-heading;
+}
+
+h4, h5, h6 {
+  font-size: $font-heading-small;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+p {
+  font-family: $font-body;
+  font-size: 18px;
+}
+
+p.small {
+  font-size: 16px;
+}
