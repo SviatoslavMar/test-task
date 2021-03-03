@@ -29,9 +29,57 @@ a {
 
 img {
   display: block;
+  width: 100%;
 }
 
 ul {
+  margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 6px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 10px;
+
+  &-middle {
+    height: 53px;
+    font-size: $btn-font-size;
+  }
+
+  &-small {
+    height: 35px;
+    font-size: $btn-small-font-size;
+  }
+
+  &-green {
+    background: $green;
+    color: $white;
+    border: 2px solid $green;
+
+    &:hover {
+      box-shadow: 0 5px 10px rgba(76, 174, 80, 0.3);
+    }
+  }
+
+  &-grey {
+    background: $white;
+    color: $grey;
+    border: 2px solid $grey;
+
+    &:hover {
+      color: $green;
+      border-color: $green;
+    }
+  }
 }

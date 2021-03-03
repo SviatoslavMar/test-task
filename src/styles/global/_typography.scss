@@ -37,10 +37,25 @@
 $font-heading: "Epiloque-Bold", "Georgia", serif;
 $font-heading-small: "Epiloque-Regular", sans-serif;
 $font-body: "OpenSans-Regular", sans-serif;
+$font-btn: "OpenSans-Bold", sans-serif;
+
+$h1-font-size: 42px;
+$h2-font-size: 32px;
+$h3-4-font-size: 22px;
+
+$p-font-size: 18px;
+$p-small-font-size: 16px;
+
+$btn-font-size: 20px;
+$btn-small-font-size: 16px;
+
+$nav-font-size: 15px;
+
 
 body {
   font-family: $font-body;
-  font-size: 1.6rem;
+  font-size: 16px;
+  line-height: 1.5;
   color: $black;
 }
 
@@ -53,19 +68,19 @@ h4, h5, h6 {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: $h1-font-size;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: $h2-font-size;
 }
 
 h3 {
-  font-size: 22px;
+  font-size: $h3-4-font-size;
 }
 
 h4 {
-  font-size: 22px;
+  font-size: $h3-4-font-size;
 }
 
 p {
@@ -75,4 +90,8 @@ p {
 
 p.small {
   font-size: 16px;
+}
+
+button {
+  font-family: $font-btn;
 }

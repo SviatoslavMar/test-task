@@ -1,8 +1,54 @@
-header {
+.header {
   background: $light-grey;
+  padding: 8px 20px;
+  box-shadow: 0 2px 16px rgba(32, 108, 164, 0.16);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    img {
+      width: 115px;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+  }
 }
 
+
 .nav {
-  display: flex;
-  align-items: center;
+
+  &-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &-item {
+
+  }
+
+  &-link {
+    font-size: $nav-font-size;
+    color: $dark;
+    padding: 0 7px;
+
+    &_img {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 5px;
+      }
+    }
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
 }
