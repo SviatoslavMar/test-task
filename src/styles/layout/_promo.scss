@@ -1,0 +1,95 @@
+.promo {
+  display: flex;
+  padding-bottom: 135px;
+
+  &-vertical_center {
+    align-items: center;
+
+    .promo-text {
+      padding: 0 20px;
+    }
+  }
+
+  &-text {
+    flex: 0 0 50%;
+
+    &_bottom {
+      margin: 35px 0 0;
+      max-width: 480px;
+    }
+  }
+
+  &-img {
+    flex: 0 0 50%;
+    position: relative;
+
+    &_background {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('./images/promo/bg.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 35% 0;
+      padding: 40px 0;
+    }
+  }
+
+  &-list {
+    margin: 70px auto 0;
+    max-width: 300px;
+  }
+}
+
+.card {
+  width: 380px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 16px rgba(32, 108, 164, 0.16);
+  border-radius: 8px;
+  padding: 28px 28px 38px;
+
+  &.card-absolute {
+    position: absolute;
+    bottom: -115px;
+    left: 240px;
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    color: $blue;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+
+  &-text {
+
+  }
+}
+
+.list-dotted {
+  &_item {
+    position: relative;
+    padding-left: 30px;
+    color: $grey;
+    line-height: 27px;
+    margin-bottom: 20px;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: $blue;
+      border-radius: 50%;
+      top: 10px;
+      left: 0;
+    }
+  }
+}

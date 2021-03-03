@@ -15,16 +15,18 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+  margin: 0 0 20px;
 }
 
 p {
   margin: 0;
+  padding-bottom: 20px;
+  color: $grey;
 }
 
 a {
   text-decoration: none;
-  color: $blue;
+  color: $light-blue;
 }
 
 img {
@@ -39,7 +41,7 @@ ul {
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1280px;
   width: 100%;
   margin: 0 auto;
 }
@@ -80,6 +82,48 @@ ul {
     &:hover {
       color: $green;
       border-color: $green;
+    }
+  }
+}
+
+.main {
+  padding: 120px 0 50px;
+}
+
+.list-line {
+  &_link {
+    padding-left: 50px;
+    font-size: $h3-4-font-size;
+    font-family: $font-epilogue;
+    line-height: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 23px;
+    margin-bottom: 30px;
+    color: $grey;
+
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: $grey;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      font-family: $font-epilogue-bold;
+      color: $green;
+
+      &:before {
+        width: 40px;
+        background: $green;
+      }
     }
   }
 }

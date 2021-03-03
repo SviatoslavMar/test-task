@@ -17,12 +17,12 @@
           <div class="header-nav">
             <nav class="nav">
               <ul class="nav-list">
-                <li class="nav-item">
+                <li class="nav-item nav-item_search">
                   <a href="#" class="nav-link">
                     <img src="images/icons/search-alt.svg" alt="search">
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item_phone">
                   <a href="#" class="nav-link nav-link_img">
                     <img src="images/icons/mobile-vibration.svg" alt="mobile">
                     Anruf
@@ -53,6 +53,7 @@
 
      <div class="main">
        <div class="container">
+
          <div class="promo">
            <div class="promo-text">
              <h1>
@@ -73,7 +74,7 @@
                (Haus-, <a href="#">Seminar-, Bachelor-, Masterarbeit</a> usw.), Korrekturlesen, Lektorat und Plagiatsprüfung.
                Diese Leistungen stehen nicht nur auf Deutsch, sondern beispielsweise auch auf <a href="#">Englisch</a> zur Verfügung.
              </p>
-             <button class="btn">
+             <button class="btn btn-middle btn-green">
                Probier jetzt aus
              </button>
            </div>
@@ -86,13 +87,16 @@
            <div class="promo-img">
              <img src="images/promo/requirements-image.png" alt="requirements-image">
 
-             <div class="promo-card">
-               <span>Merke:</span>
-               <span>
+             <div class="card card-absolute">
+               <p class="card-title bold-paragraph">
+                 <img src="images/icons/card-icon.svg" alt="card">
+                 Merke:
+               </p>
+               <p class="card-text small-paragraph">
                  Das Verfassen einer Facharbeit stellt eine Art Vorbereitung auf den Studienabschluss dar;
                  nicht selten brauchen die angehenden Studenten und Studentinnen Hilfe, um sich nicht in den Mustern,
                  denen sie folgen sollten, zu verlieren.
-               </span>
+               </p>
              </div>
 
            </div>
@@ -116,61 +120,61 @@
 
          <div class="calculator">
            <h2>Berechne den Preis</h2>
-           <span>Bitte fülle alle nötigen Felder aus und der Preisrechner zeigt dir den Preis</span>
-           <form action="post" class="calculator-form">
-             <div class="calculator-form_block">
+           <p>Bitte fülle alle nötigen Felder aus und der Preisrechner zeigt dir den Preis</p>
+           <form action="post" class="form">
+             <div class="form-item">
                 <span>€ 56.25</span>
              </div>
-             <div class="calculator-form_block">
-                <button>Anfragen</button>
+             <div class="form-item">
+                <button class="btn btn-green btn-middle" type="submit">Anfragen</button>
              </div>
            </form>
          </div>
 
          <div class="stepper">
            <h2>Die Facharbeit in wenigen Schritten schreiben</h2>
-           <p>
+           <p class="stepper-paragraph">
              In den nächsten Abschnitten liest Du, wie eine Facharbeit Schritt für Schritt erstellt wird.
              Ein Tipp vorweg: Die Länge der wissenschaftlichen Arbeit beträgt i.d.R. zwischen zehn und 12 Seiten.
            </p>
-           <div class="stepper-circles">
-             <div class="circle">
+           <div class="circle">
+             <div class="circle-item">
                <span class="circle-number">1</span>
-               Das passende Thema finden
+               <p class="circle-text">Das passende Thema finden</p>
              </div>
-             <div class="circle">
+             <div class="circle-item">
                <span class="circle-number">2</span>
-               Die Gliederung erstellen
+               <p class="circle-text">Die Gliederung erstellen</p>
              </div>
-             <div class="circle">
+             <div class="circle-item">
                <span class="circle-number">3</span>
-               Die Facharbeit schreiben
+               <p class="circle-text">Die Facharbeit schreiben</p>
              </div>
-             <div class="circle circle_disabled">
+             <div class="circle-item circle-item_disable">
                <span class="circle-number">4</span>
-               Die Facharbeit überprüfen (lassen)
+               <p class="circle-text">Die Facharbeit überprüfen (lassen)</p>
              </div>
            </div>
 
            <div class="stepper-list">
-             <h3>Schritt 3</h3>
+             <h3 class="list-title_small">Schritt 3</h3>
              <h2>Die Facharbeit schreiben:</h2>
              <div class="list-wrapper">
-               <ul>
-                 <li>Einführung</li>
-                 <li>Die Einleitung schreiben</li>
-                 <li>Den Hauptteil verfassen</li>
-                 <li>Das Fazit schreiben</li>
-                 <li>Richtig zitieren will gelernt sein!</li>
+               <ul class="list-line">
+                 <li class="list-line_item"><a href="#" class="list-line_link">Einführung</a></li>
+                 <li class="list-line_item"><a href="#" class="list-line_link">Die Einleitung schreiben</a></li>
+                 <li class="list-line_item"><a href="#" class="list-line_link">Den Hauptteil verfassen</a></li>
+                 <li class="list-line_item"><a href="#" class="list-line_link">Das Fazit schreiben</a></li>
+                 <li class="list-line_item"><a href="#" class="list-line_link">Richtig zitieren will gelernt sein!</a></li>
                </ul>
 
-               <ul>
-                 <li>Die Einleitung enthält diese Elemente:</li>
-                 <li>1. Einführung in das Thema und die Frage, die behandelt wird.</li>
-                 <li>2. Übersicht über die inhaltliche Vorgehensweise und die Struktur der Arbeit.</li>
-                 <li>3. Formulierung des Ziels der Arbeit und Erläuterung der notwendigen Schritte, um dieses zu erreichen.</li>
-                 <li>
-                   Übrigens:
+               <ul class="list-number">
+                 <li class="list-number_item">Die Einleitung enthält diese Elemente:</li>
+                 <li class="list-number_item"><span class="list-number_item_marker">1.</span> Einführung in das Thema und die Frage, die behandelt wird.</li>
+                 <li class="list-number_item"><span class="list-number_item_marker">2.</span> Übersicht über die inhaltliche Vorgehensweise und die Struktur der Arbeit.</li>
+                 <li class="list-number_item"><span class="list-number_item_marker">3.</span> Formulierung des Ziels der Arbeit und Erläuterung der notwendigen Schritte, um dieses zu erreichen.</li>
+                 <li class="list-number_item">
+                   <span class="list-number_item_marker list-number_item_block">Übrigens:</span>
                    Die Einleitung macht fünf bis zehn Prozent der Facharbeit aus.
                  </li>
                </ul>
@@ -184,16 +188,38 @@
 
            <div class="slider-wrapper">
              <div class="slider-item">
-               <div class="item-star">5 *****</div>
-               <div class="item-text">
+               <div class="slider-item_wrap">
+                 <div class="slider-item_quote">
+                   <img src="images/icons/quote.svg" alt="quote">
+                 </div>
+                 <div class="slider-item_rating">
+                   5
+                   <span class="slider-item_star">
+                   <img src="images/icons/star-green.svg" alt="star">
+                 </span>
+                   <span class="slider-item_star">
+                   <img src="images/icons/star-green.svg" alt="star">
+                 </span>
+                   <span class="slider-item_star">
+                   <img src="images/icons/star-green.svg" alt="star">
+                 </span>
+                   <span class="slider-item_star">
+                   <img src="images/icons/star-green.svg" alt="star">
+                 </span>
+                   <span class="slider-item_star">
+                   <img src="images/icons/star-green.svg" alt="star">
+                 </span>
+                 </div>
+               </div>
+               <div class="slider-item_text">
                  Ich wollte mich recht herzlich bei Ihnen für die tolle Analyse bedanken - ich habe die Note A+ bekommen.
                  Tausend Dank für die tolle Arbeit und liebe Grüße aus Wien
                </div>
-               <div class="item-id">
-                 <div class="item-author"></div>
+               <div class="slider-item_id">
+                 <img class="slider-item_user" src="images/icons/user.svg">
                  ID: 21015
                </div>
-               <div class="item-info">
+               <div class="slider-item_info">
                  Bachelorarbeit|Geisteswissenschaften
                </div>
              </div>
@@ -213,16 +239,16 @@
                Vorteilen (s.u.). Unsere Autoren arbeiten höchst professionell und erstellen Deine wissenschaftliche
                Arbeit in drei Phasen:
              </p>
-             <ul>
-               <li>Vorbereitungsphase</li>
-               <li>Schreibphase</li>
-               <li>Nachbereitungsphase</li>
+             <ul class="list-line promo-list">
+               <li class="list-line_item"><a href="#" class="list-line_link">Vorbereitungsphase</a></li>
+               <li class="list-line_item"><a href="#" class="list-line_link">Schreibphase</a></li>
+               <li class="list-line_item"><a href="#" class="list-line_link">Nachbereitungsphase</a></li>
              </ul>
 
            </div>
            <div class="promo-img">
              <img src="images/promo/specialist-image.png" alt="specialist-image">
-             <div class="promo-text">
+             <div class="promo-text promo-text_bottom">
                <p>
                  In der Vorbereitungsphase findet der Ghostwriter ein geeignetes
                  Thema und er recherchiert nach wissenschaftlicher Literatur. Darauf aufbauend erstellt er die
@@ -232,7 +258,7 @@
            </div>
          </div>
 
-         <div class="promo">
+         <div class="promo promo-vertical_center">
            <div class="promo-img">
              <img src="images/promo/advantages-image.png" alt="advantages-image">
            </div>
@@ -242,21 +268,21 @@
                Deine Vorteile auf einen Blick
              </h2>
 
-             <ul>
-               <li>
+             <ul class="list-dotted">
+               <li class="list-dotted_item">
                  Wir arbeiten auf wissenschaftlichem Niveau und fertigen Deine Facharbeit in Rekordzeit an.
                </li>
-               <li>
+               <li class="list-dotted_item">
                  Egal, ob Komplettlösung (= Erstellen einer Facharbeit) oder einzelne Leistung (Korrekturlesen o.Ä.)
                  - unsere Experten wissen, worauf es ankommt.
                </li>
-               <li>
+               <li class="list-dotted_item">
                  Du profitierst von kostengünstigen Preisen und einer professionellen Betreuung.
                </li>
-               <li>
+               <li class="list-dotted_item">
                  Wir behandeln Deinen Auftrag diskret.
                </li>
-               <li>
+               <li class="list-dotted_item">
                  Wir halten unsere Termine garantiert ein.
                </li>
              </ul>
@@ -264,7 +290,7 @@
            </div>
          </div>
 
-         <div class="promo">
+         <div class="promo promo-vertical_center">
            <div class="promo-text">
              <h2>
                Unbedingt beachten: typische Fehler, die Lernende begehe
@@ -291,13 +317,16 @@
            </div>
          </div>
 
-         <div class="promo">
-           <div class="promo-img">
-             <div class="promo-card">
-               <span>Merke:</span>
-               <span>
-                  Das Sichten, Auswählen und Sortieren von Quellen nimmt viel Zeit in Anspruch und ist äußerst arbeitsintensiv.
-               </span>
+         <div class="promo promo-vertical_center">
+           <div class="promo-img promo-img_background">
+             <div class="card">
+               <p class="card-title bold-paragraph">
+                 <img src="images/icons/card-icon.svg" alt="card">
+                 Merke:
+               </p>
+               <p class="card-text small-paragraph">
+                 Das Sichten, Auswählen und Sortieren von Quellen nimmt viel Zeit in Anspruch und ist äußerst arbeitsintensiv.
+               </p>
              </div>
            </div>
            <div class="promo-text">

@@ -1,0 +1,109 @@
+.stepper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 130px 0;
+
+  &-paragraph {
+    text-align: center;
+    max-width: 840px;
+  }
+
+  &-list {
+    width: 100%;
+  }
+
+  .list-title_small {
+    margin-bottom: 0;
+  }
+}
+
+.circle {
+  display: flex;
+  justify-content: space-around;
+  max-width: 980px;
+  width: 100%;
+
+  &-item {
+    display: flex;
+    flex: 0 0 25%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    &:first-child:before {
+      display: none;
+    }
+
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: -50%;
+      width: calc(100% + 20px);
+      height: 2px;
+      background: $green;
+      z-index: 1;
+    }
+
+    &_disable {
+      opacity: 0.3;
+    }
+  }
+
+
+
+  &-number {
+    font-family: $font-epilogue-bold;
+    font-size: $number-font;
+    line-height: 44px;
+    background: $opacity-green;
+    display: flex;
+    color: $green;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    z-index: 2;
+  }
+
+  &-text {
+    font-size: $p-small-font-size;
+    max-width: 135px;
+    color: $green;
+  }
+}
+
+.list-wrapper {
+  display: flex;
+  justify-content: space-between;
+  color: $grey;
+  font-family: $font-epilogue;
+
+  .list-line,
+  .list-number {
+    flex: 0 0 50%;
+  }
+
+  .list-number {
+    &_item {
+      font-size: $p-small-font-size;
+      font-family: $font-body;
+      line-height: 21px;
+      color: $grey;
+      margin-bottom: 20px;
+
+      &_marker {
+        font-family: $font-bold;
+        color: $green;
+      }
+
+      &_block {
+        display: block;
+      }
+    }
+  }
+}

@@ -34,10 +34,10 @@
   url("./fonts/OpenSans-Bold.woff") format("woff");
 }
 
-$font-heading: "Epiloque-Bold", "Georgia", serif;
-$font-heading-small: "Epiloque-Regular", sans-serif;
+$font-epilogue-bold: "Epiloque-Bold", "Georgia", serif;
+$font-epilogue: "Epiloque-Regular", sans-serif;
 $font-body: "OpenSans-Regular", sans-serif;
-$font-btn: "OpenSans-Bold", sans-serif;
+$font-bold: "OpenSans-Bold", sans-serif;
 
 $h1-font-size: 42px;
 $h2-font-size: 32px;
@@ -50,6 +50,7 @@ $btn-font-size: 20px;
 $btn-small-font-size: 16px;
 
 $nav-font-size: 15px;
+$number-font: 24px;
 
 
 body {
@@ -59,12 +60,17 @@ body {
   color: $black;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  color: $blue;
+}
+
 h1, h2, h3 {
-  font-family: $font-heading;
+  font-family: $font-epilogue-bold;
 }
 
 h4, h5, h6 {
-  font-size: $font-heading-small;
+  font-size: $font-epilogue;
 }
 
 h1 {
@@ -86,12 +92,16 @@ h4 {
 p {
   font-family: $font-body;
   font-size: 18px;
-}
 
-p.small {
-  font-size: 16px;
+  &.small-paragraph {
+    font-size: 16px;
+  }
+
+  &.bold-paragraph {
+    font-family: $font-bold;
+  }
 }
 
 button {
-  font-family: $font-btn;
+  font-family: $font-bold;
 }

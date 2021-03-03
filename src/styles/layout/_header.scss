@@ -31,16 +31,20 @@
 
   &-item {
 
+    &_search {
+      margin-right: 20px;
+    }
   }
 
   &-link {
     font-size: $nav-font-size;
     color: $dark;
-    padding: 0 7px;
+    margin: 0 8px;
 
     &_img {
       display: flex;
       align-items: center;
+      font-family: $font-bold;
 
       img {
         margin-right: 5px;
@@ -48,7 +52,7 @@
     }
 
     &:hover {
-      font-weight: 700;
+      color: $green;
     }
   }
 }
