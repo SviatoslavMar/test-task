@@ -1,0 +1,183 @@
+.footer {
+  background: $black-light;
+  padding: 67px 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-cell {
+
+    &_text {
+      font-family: $font-roboto;
+      color: $medium-gray;
+      font-size: $copy-font-size;
+      margin-bottom: 8px;
+      padding-bottom: 0;
+    }
+  }
+
+  &-contact {
+    margin-bottom: 47px;
+
+    &_text {
+      font-size: $p-small-font-size;
+      font-family: $font-roboto;
+      color: $medium-gray;
+    }
+  }
+
+  &-phone {
+    color: $medium-gray;
+    font-family: $font-roboto;
+
+    &_bold {
+      font-family: $font-roboto-bold;
+    }
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  &-rating {
+    display: flex;
+
+    &_star {
+      width: 22px;
+      height: 22px;
+      display: block;
+      margin-right: 4px;
+    }
+
+    &_text {
+      color: $green;
+      padding-left: 15px;
+    }
+
+    &_break {
+      color: $dark-grey;
+    }
+  }
+
+  &-dropdown {
+    font-family: $font-roboto;
+    font-size: $p-small-font-size;
+    color: $dark-grey;
+  }
+
+  &-list {
+
+  }
+
+  &-item {
+
+    &_link {
+      display: block;
+      font-family: $font-roboto;
+      font-size: $p-small-font-size;
+      color: $medium-gray;
+      line-height: 18px;
+      margin-bottom: 15px;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  &-links {
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  &-link {
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: grayscale(1) opacity(0.5);
+
+    &_fb {
+      background-image: url('./images/icons/logos-facebook.svg');
+    }
+
+    &_inst {
+      background-image: url('./images/icons/logos-instagram.svg');
+    }
+
+    &_yt {
+      background-image: url('./images/icons/logos-youtube.svg');
+    }
+
+    &_pt {
+      background-image: url('./images/icons/logos-pinterest.svg');
+    }
+
+    &_visa {
+      width: 41px;
+      height: 32px;
+      background-image: url('./images/icons/visa.svg');
+    }
+
+    &_mastercard {
+      width: 48px;
+      height: 32px;
+      background-image: url('./images/icons/mastercard.svg');
+    }
+
+    &:hover {
+      filter: grayscale(0) opacity(1);
+    }
+  }
+
+  &-dmca {
+    font-family: $font-roboto-bold;
+    color: $medium-gray;
+    margin-bottom: 34px;
+
+    &_span {
+      background: $medium-gray;
+      color: $black;
+      padding: 0 5px;
+    }
+  }
+
+  &-pdf {
+    padding-left: 27px;
+    font-family: $font-roboto;
+    color: $medium-gray;
+    text-decoration: underline;
+    background-image: url('./images/icons/file-pdf.svg');
+    background-size: 22px 22px;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  &-copyright {
+    padding-top: 60px;
+    text-align: center;
+
+    &_text {
+      color: $dark-grey;
+      font-family: $font-roboto;
+      font-size: $copy-font-size;
+      line-height: 1.2;
+      padding: 0;
+    }
+  }
+}

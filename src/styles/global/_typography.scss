@@ -34,10 +34,30 @@
   url("./fonts/OpenSans-Bold.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Roboto";
+  font-display: fallback;
+  font-style: normal;
+  src: url("./fonts/Roboto-Regular.ttf") format("ttf"),
+  url("./fonts/Roboto-Regular.woff2") format("woff2"),
+  url("./fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  font-display: fallback;
+  font-style: normal;
+  src: url("./fonts/Roboto-Bold.ttf") format("ttf"),
+  url("./fonts/Roboto-Bold.woff2") format("woff2"),
+  url("./fonts/Roboto-Bold.woff") format("woff");
+}
+
 $font-epilogue-bold: "Epiloque-Bold", "Georgia", serif;
 $font-epilogue: "Epiloque-Regular", sans-serif;
 $font-body: "OpenSans-Regular", sans-serif;
 $font-bold: "OpenSans-Bold", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+$font-roboto-bold: "Roboto-Bold", sans-serif;
 
 $h1-font-size: 42px;
 $h2-font-size: 32px;
@@ -45,6 +65,7 @@ $h3-4-font-size: 22px;
 
 $p-font-size: 18px;
 $p-small-font-size: 16px;
+$copy-font-size: 14px;
 
 $btn-font-size: 20px;
 $btn-small-font-size: 16px;
