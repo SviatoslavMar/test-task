@@ -1,4 +1,5 @@
-.faq {
+.faq,
+.accordion {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -6,7 +7,78 @@
 }
 
 .accordion {
-  &-item {
+  width: 100%;
+  margin-bottom: 56px;
 
+  &-title {
+    margin: 0;
+    padding: 20px 24px;
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 16px;
+      height: 8px;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      background-repeat: no-repeat;
+      background-size: 16px 8px;
+      background-image: url('./images/icons/arrow.svg');
+      background-position: center;
+    }
+  }
+
+  &-content {
+    display: none;
+    padding: 0 24px 20px 24px;
+  }
+
+  &-text {
+    border-top: 1px solid $border-color;
+    padding: 14px 0 0;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    counter-reset: num-counter;
+    padding-top: 14px;
+
+    &-item {
+      counter-increment: num-counter;
+      margin-right: 12px;
+      color: $grey;
+      font-size: $p-font-size;
+
+      &:before {
+        content: counter(num-counter) ". ";
+      }
+    }
+  }
+
+  &-item {
+    max-width: 1044px;
+    width: 100%;
+    box-shadow: 0 2px 16px rgba(32, 108, 164, 0.16);
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  &-active {
+    .accordion-title {
+      padding: 20px 24px 14px 24px;
+
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+
+    .accordion-content {
+      display: block;
+    }
   }
 }

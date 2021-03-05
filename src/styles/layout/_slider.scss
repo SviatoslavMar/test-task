@@ -1,9 +1,26 @@
 .slider {
   text-align: center;
   margin-bottom: 200px;
+  position: relative;
+
+  .glide__bullets {
+    bottom: -90px;
+  }
+
+  .glide__bullet {
+    width: 15px;
+    height: 15px;
+    background: $opacity-blue;
+    box-shadow: none;
+    margin: 0 7px;
+
+    &--active {
+      background: $light-blue;
+    }
+  }
 
   &-wrapper {
-
+    margin-bottom: 20px;
   }
 
   &-link {
