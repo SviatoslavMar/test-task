@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="Description" content="test"/>
     <meta name="theme-color" content="#2c638f" />
-    <link rel="stylesheet" href="https://cdn.bootcss.com/Glide.js/2.1.0/css/glide.core.min.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/Glide.js/2.1.0/css/glide.theme.min.css">
   </head>
   <body>
     <header class="header">
@@ -48,7 +46,7 @@
               </ul>
             </nav>
             <button class="btn btn-small btn-green">Anfragen</button>
-            <button class="btn btn-small btn-grey">Anmelden</button>
+            <button class="btn btn-small btn-grey btn-open">Anmelden</button>
           </div>
         </div>
     </header>
@@ -124,11 +122,74 @@
            <h2>Berechne den Preis</h2>
            <p>Bitte fülle alle nötigen Felder aus und der Preisrechner zeigt dir den Preis</p>
            <form action="post" class="form">
-             <div class="form-item">
-                <span>€ 56.25</span>
+             <div class="form-item form-item_select">
+                 <div class="select select-small">
+                     <div class="select-header">
+                         <span class="select-current">Schreiben</span>
+                     </div>
+                     <div class="select-body">
+                         <div class="select-item">Schreiben 1</div>
+                         <div class="select-item">Schreiben 2</div>
+                         <div class="select-item">Schreiben 3</div>
+                         <div class="select-item">Schreiben 4</div>
+                         <div class="select-item">Schreiben 5</div>
+                     </div>
+                 </div>
+
+                 <div class="select select-small">
+                     <div class="select-header">
+                         <span class="select-current">Bachelor</span>
+                     </div>
+                     <div class="select-body">
+                         <div class="select-item">Bachelor 1</div>
+                         <div class="select-item">Bachelor 2</div>
+                         <div class="select-item">Bachelor 3</div>
+                         <div class="select-item">Bachelor 4</div>
+                         <div class="select-item">Bachelor 5</div>
+                     </div>
+                 </div>
+
+                 <div class="counter">
+                     <span class="counter-minus">-</span>
+                     <input class="counter-input" type="number" value="1"/>
+                     <span class="counter-plus">+</span>
+                 </div>
+
+                 <div class="select select-small select-margin select-date">
+                     <input class="date-input" type="date" value="2020-11-12" />
+                     <span class="date-span">12 Nov 2020</span>
+                 </div>
+
+                 <div class="select select-medium">
+                     <div class="select-header">
+                         <span class="select-current">Hausarbeit</span>
+                     </div>
+                     <div class="select-body">
+                         <div class="select-item">Hausarbeit 1</div>
+                         <div class="select-item">Hausarbeit 2</div>
+                         <div class="select-item">Hausarbeit 3</div>
+                         <div class="select-item">Hausarbeit 4</div>
+                         <div class="select-item">Hausarbeit 5</div>
+                     </div>
+                 </div>
+
+                 <div class="select select-medium select-margin">
+                     <div class="select-header">
+                         <span class="select-current">Sprach- & Kulturwissenschaften</span>
+                     </div>
+                     <div class="select-body">
+                         <div class="select-item">Sprach- & Kulturwissenschaften 1</div>
+                         <div class="select-item">Sprach- & Kulturwissenschaften 2</div>
+                         <div class="select-item">Sprach- & Kulturwissenschaften 3</div>
+                         <div class="select-item">Sprach- & Kulturwissenschaften 4</div>
+                         <div class="select-item">Sprach- & Kulturwissenschaften 5</div>
+                     </div>
+                 </div>
+
              </div>
-             <div class="form-item">
-                <button class="btn btn-green btn-middle" type="submit">Anfragen</button>
+             <div class="form-item form-item_result">
+                <span class="form-price">€ 56.25</span>
+                <button class="btn btn-green btn-middle form-btn" type="submit">Anfragen</button>
              </div>
            </form>
          </div>
@@ -653,5 +714,24 @@
       </div>
     </footer>
 
+    <div class="popup">
+        <div class="popup-block">
+            <img src="images/popup-img%201.jpg" alt="popup">
+            <div class="popup-content">
+                <a class="popup-close" href="#"></a>
+                <h2 class="popup-title">
+                    Halt, nimm dich Zeit!
+                </h2>
+                <p class="popup-text">
+                    Gehör zu den Ersten, die von den neuesten und attraktivsten Angeboten der hausarbeit-agentur.com profitieren und sich exklusiv einen 5% Rabatt holen!
+                </p>
+                <form class="popup-form" action="post">
+                    <input class="popup-input" type="text" placeholder="deine@email.com">
+                    <input class="popup-input" type="text" placeholder="Name">
+                    <button class="btn btn-green btn-middle popup-btn">Ja, ich möchte!</button>
+                </form>
+            </div>
+        </div>
+    </div>
   </body>
 </html>

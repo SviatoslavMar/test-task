@@ -10,9 +10,209 @@
 
 .form {
   display: flex;
-  flex-direction: column;
+  max-width: 980px;
 
   &-item {
+    display: flex;
 
+    &_select {
+      flex-wrap: wrap;
+    }
+
+    &_result {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &-select {
+
+  }
+
+  &-price {
+    font-family: $font-epilogue-bold;
+    font-size: $h3-4-font-size;
+    color: $green;
+    line-height: 55px;
+  }
+
+  &-btn {
+    padding: 6px 42px;
+  }
+
+  &-date {
+    position: relative;
+  }
+
+  .date-input {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    max-width: 160px;
+    width: 100%;
+    height: 53px;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    transform: rotateY(-180deg);
+  }
+
+  .date-span {
+    max-width: 180px;
+    width: 100%;
+    display: block;
+    height: 53px;
+    box-shadow: 0 1px 3px rgba(5, 41, 83, 0.14);
+    border-radius: 10px;
+    position: relative;
+    padding: 12px 12px 12px 24px;
+    border: none;
+    font-size: $p-font-size;
+    color: $blue;
+    text-align: center;
+    background-color: $light-grey;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-image: url('./images/icons/calendar.svg');
+    background-position: 24px 20px;
+    cursor: pointer;
+  }
+}
+
+.select {
+  position: relative;
+  margin-right: 19px;
+
+  &-small {
+    width: 180px;
+    margin-bottom: 30px;
+
+    .select-body {
+      z-index: 2;
+    }
+  }
+
+  &-medium {
+    width: 380px;
+  }
+
+  &-margin {
+    margin-right: 0;
+  }
+
+  &-header {
+    box-shadow: 0 1px 3px rgba(5, 41, 83, 0.14);
+    border-radius: 10px;
+    background: $light-grey;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 9px;
+      height: 6px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('./images/icons/arrow.svg');
+      background-position: center;
+    }
+  }
+
+  &-current {
+    font-size: $p-font-size;
+    color: $blue;
+    padding: 12px;
+  }
+
+  &-body {
+    border-top: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    box-shadow: 0 1px 3px rgba(5, 41, 83, 0.14);
+    background: $light-grey;
+    z-index: 1;
+  }
+
+  &-item {
+    cursor: pointer;
+    font-size: $p-font-size;
+    color: $blue;
+    padding: 12px;
+
+    &:first-child {
+      border-radius: 10px 10px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 10px 10px;
+    }
+
+    &:hover {
+      background-color: darken($light-grey, 10%);
+    }
+  }
+
+  &.is-active {
+    .select-body {
+      display: block;
+    }
+
+    .select-header {
+      &:before {
+        transform: translateY(-50%) rotate(0deg);
+      }
+    }
+  }
+}
+
+.counter {
+  position: relative;
+  margin-right: 19px;
+
+  &-minus,
+  &-plus {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+    color: $blue;
+    font-size: $h2-font-size;
+    font-family: $font-body;
+    width: 50px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-minus {
+    left: 0;
+  }
+
+  &-plus {
+    right: 0;
+  }
+
+  &-input {
+    background: $light-grey;
+    color: $blue;
+    font-size: $p-font-size;
+    font-family: $font-body;
+    max-width: 180px;
+    height: 53px;
+    border: none;
+    box-shadow: 0 1px 3px rgba(5, 41, 83, 0.14);
+    border-radius: 10px;
+    text-align: center;
   }
 }
