@@ -38,5 +38,12 @@ function showdate() {
   let dateArr = customerDate.split("-");
   document.querySelector(".date-span").innerHTML = dateArr[2]+ " " + month + " " + dateArr[0];
 }
-const cha = document.querySelector('.date-input');
-cha.addEventListener('change', showdate);
+const dateInput = document.querySelector('.date-input');
+dateInput.addEventListener('change', showdate);
+
+function mobileMenu() {
+  const element = document.querySelector(".header-nav");
+  element.classList.toggle("header-nav_mobile");
+}
+
+document.querySelector(".header-mobile-btn").addEventListener('click', mobileMenu);

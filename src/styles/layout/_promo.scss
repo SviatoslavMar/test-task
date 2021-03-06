@@ -13,6 +13,10 @@
   &-text {
     flex: 0 0 50%;
 
+    @include _1440 {
+      padding: 0 40px;
+    }
+
     &_bottom {
       margin: 35px 0 0;
       max-width: 480px;
@@ -51,7 +55,7 @@
   &.card-absolute {
     position: absolute;
     bottom: -115px;
-    left: 240px;
+    right: 38px;
   }
 
   &-title {

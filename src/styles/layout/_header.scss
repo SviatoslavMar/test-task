@@ -18,6 +18,38 @@
   &-nav {
     display: flex;
     align-items: center;
+
+    @include _1024 {
+      position: absolute;
+      background: pink;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      height: 100vh;
+      z-index: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    &_mobile {
+      left: 0;
+    }
+  }
+
+  &-btn {
+    @include _1024 {
+      margin-top: 10px;
+    }
+  }
+
+  &-mobile-btn {
+    width: 30px;
+    display: none;
+
+    @include _1024 {
+      display: block;
+    }
   }
 }
 
@@ -27,9 +59,17 @@
   &-list {
     display: flex;
     align-items: center;
+
+    @include _1024 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &-item {
+    @include _1024 {
+      padding: 10px;
+    }
 
     &_search {
       margin-right: 20px;
@@ -40,6 +80,10 @@
     font-size: $nav-font-size;
     color: $dark;
     margin: 0 8px;
+
+    @include _1024 {
+      margin: 0;
+    }
 
     &_img {
       display: flex;

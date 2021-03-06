@@ -41,6 +41,11 @@
     border-radius: 8px;
     position: relative;
 
+    @include _1280 {
+      //width: 100%;
+      margin: 10px auto;
+    }
+
     &_wrap {
       display: flex;
       justify-content: space-between;
