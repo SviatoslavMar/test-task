@@ -12,9 +12,38 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @include _1024 {
+      flex-wrap: wrap;
+    }
   }
 
   &-cell {
+
+    @include _1024 {
+      flex: 0 0 50%;
+      margin-bottom: 30px;
+
+      &_first {
+        order: 1;
+      }
+
+      &_second {
+        order: 2;
+      }
+
+      &_third {
+        order: 3;
+      }
+
+      &_last {
+        order: 4;
+      }
+    }
+
+    @include _767 {
+      flex: 0 0 100%;
+    }
 
     &_text {
       font-family: $font-roboto;
@@ -72,6 +101,27 @@
     font-family: $font-roboto;
     font-size: $p-small-font-size;
     color: $dark-grey;
+    border: 2px solid $dark-grey;
+    border-radius: 28px;
+    padding: 8px 42px 8px 25px;
+    max-width: 105px;
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%) rotate(180deg);
+      display: block;
+      content: '';
+      width: 9px;
+      height: 5px;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('./images/icons/arrow.svg');
+      background-position: center;
+    }
   }
 
   &-list {
@@ -171,6 +221,11 @@
   &-copyright {
     padding-top: 60px;
     text-align: center;
+
+    @include _1024 {
+      width: 100%;
+      text-align: left;
+    }
 
     &_text {
       color: $dark-grey;

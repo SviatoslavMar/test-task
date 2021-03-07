@@ -74,6 +74,16 @@
     font-size: $p-small-font-size;
     max-width: 135px;
     color: $green;
+
+    @include _767 {
+      font-size: $copy-font-size;
+    }
+
+    &_hide {
+      @include _767 {
+        display: none;
+      }
+    }
   }
 }
 
@@ -83,9 +93,17 @@
   color: $grey;
   font-family: $font-epilogue;
 
+  @include _1024 {
+    flex-wrap: wrap;
+  }
+
   .list-line,
   .list-number {
     flex: 0 0 50%;
+
+    @include _1024 {
+      flex: 0 0 100%;
+    }
   }
 
   .list-number {

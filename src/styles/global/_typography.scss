@@ -77,7 +77,7 @@ $number-font: 24px;
 
 body {
   font-family: $font-body;
-  font-size: 16px;
+  font-size: $p-small-font-size;
   line-height: 1.5;
   color: $black;
 }
@@ -97,10 +97,18 @@ h4, h5, h6 {
 
 h1 {
   font-size: $h1-font-size;
+
+  @include _767 {
+    font-size: $h3-4-font-size;
+  }
 }
 
 h2 {
   font-size: $h2-font-size;
+
+  @include _767 {
+    font-size: $h3-4-font-size;
+  }
 }
 
 h3 {
@@ -115,8 +123,16 @@ p {
   font-family: $font-body;
   font-size: 18px;
 
+  @include _767 {
+    font-size: $p-small-font-size;
+  }
+
   &.small-paragraph {
-    font-size: 16px;
+    font-size: $p-small-font-size;
+
+    @include _767 {
+      font-size: $copy-font-size;
+    }
   }
 
   &.bold-paragraph {

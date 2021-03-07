@@ -3,8 +3,22 @@
   margin-bottom: 200px;
   position: relative;
 
+  @include _1024-768 {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+
+  @include _767 {
+    margin-bottom: 80px;
+  }
+
   .glide__bullets {
     bottom: -90px;
+  }
+
+  .glide__slide {
+    min-width: 380px;
+    margin: 0 10px;
   }
 
   .glide__bullet {
@@ -42,8 +56,11 @@
     position: relative;
 
     @include _1280 {
-      //width: 100%;
       margin: 10px auto;
+    }
+
+    @include _767 {
+      width: 100%;
     }
 
     &_wrap {

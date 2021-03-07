@@ -2,6 +2,14 @@
   display: flex;
   padding-bottom: 135px;
 
+  @include _1024 {
+    flex-direction: column;
+  }
+
+  @include _480 {
+    padding-bottom: 10px;
+  }
+
   &-vertical_center {
     align-items: center;
 
@@ -17,6 +25,10 @@
       padding: 0 40px;
     }
 
+    @include _767 {
+      padding: 0 10px;
+    }
+
     &_bottom {
       margin: 35px 0 0;
       max-width: 480px;
@@ -27,6 +39,15 @@
     flex: 0 0 50%;
     position: relative;
 
+    @include _1280-1025 {
+      margin: auto;
+    }
+
+    @include _1024-768 {
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+
     &_background {
       display: flex;
       justify-content: center;
@@ -36,12 +57,38 @@
       background-size: contain;
       background-position: 35% 0;
       padding: 40px 0;
+
+      @include _1024-768 {
+        margin: auto;
+      }
+    }
+
+    &_tablet {
+      @include _1024 {
+        display: none;
+      }
     }
   }
 
   &-list {
     margin: 70px auto 0;
     max-width: 300px;
+
+    @include _1024 {
+      max-width: 100%;
+    }
+  }
+
+  &-order {
+    @include _1024 {
+      &_first {
+        order: 0;
+      }
+
+      &_last {
+        order: 1;
+      }
+    }
   }
 }
 
@@ -52,10 +99,23 @@
   border-radius: 8px;
   padding: 28px 28px 38px;
 
+  @include _767 {
+    width: 100%;
+  }
+
   &.card-absolute {
     position: absolute;
     bottom: -115px;
     right: 38px;
+
+    @include _767 {
+      width: 300px;
+      position: relative;
+      bottom: initial;
+      right: initial;
+      transform: translateY(-25%);
+      margin: auto;
+    }
   }
 
   &-title {

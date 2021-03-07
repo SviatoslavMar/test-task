@@ -6,23 +6,52 @@
   border-radius: 8px;
   padding: 60px;
   margin: 60px 0;
+
+  @include _1024-768 {
+    margin: 130px 0;
+    padding: 60px 30px;
+  }
+
+  @include _767 {
+    margin: 0;
+    padding: 30px 10px;
+  }
 }
 
 .form {
   display: flex;
-  max-width: 980px;
+  max-width: 1010px;
+  padding: 0 4px;
+
+  @include _1280 {
+    flex-direction: column;
+  }
+
+  @include _767 {
+    width: 100%;
+  }
 
   &-item {
     display: flex;
 
     &_select {
       flex-wrap: wrap;
+
+      @include _1280-1025 {
+        justify-content: center;
+      }
     }
 
     &_result {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+
+      @include _1280-1025 {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 30px;
+      }
     }
   }
 
@@ -40,6 +69,10 @@
   &-btn {
     padding: 6px 42px;
     margin: 0 0 0 20px;
+
+    @include _767 {
+      margin: 0;
+    }
   }
 
   &-date {
@@ -57,6 +90,10 @@
     opacity: 0;
     cursor: pointer;
     transform: rotateY(-180deg);
+
+    @include _1024 {
+      max-width: 100%;
+    }
   }
 
   .date-span {
@@ -78,12 +115,17 @@
     background-image: url('./images/icons/calendar.svg');
     background-position: 24px 20px;
     cursor: pointer;
+
+    @include _1024 {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 }
 
 .select {
   position: relative;
-  margin-right: 19px;
+  margin: 0 10px;
 
   &-small {
     width: 180px;
@@ -92,14 +134,35 @@
     .select-body {
       z-index: 2;
     }
+
+    @include _1024-768 {
+      width: calc(50% - 20px);
+    }
+
+    @include _767 {
+      width: 100%;
+      margin: 0 0 30px;
+    }
   }
 
   &-medium {
     width: 380px;
+
+    @include _1024-768 {
+      width: 100%;
+      margin: 0 10px 30px;
+    }
+
+    @include _767 {
+      width: 100%;
+      margin: 0 0 30px;
+    }
   }
 
   &-margin {
-    margin-right: 0;
+    @include _1025 {
+      margin-right: 0;
+    }
   }
 
   &-header {
@@ -179,6 +242,21 @@
 .counter {
   position: relative;
   margin-right: 19px;
+  max-width: 180px;
+  width: 100%;
+
+  @include _1024-768 {
+    max-width: 50%;
+    width: calc(50% - 20px);
+    margin: 0 10px 30px;
+  }
+
+  @include _767 {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
 
   &-minus,
   &-plus {
@@ -209,7 +287,7 @@
     color: $blue;
     font-size: $p-font-size;
     font-family: $font-body;
-    max-width: 180px;
+    width: 100%;
     height: 53px;
     border: none;
     box-shadow: 0 1px 3px rgba(5, 41, 83, 0.14);

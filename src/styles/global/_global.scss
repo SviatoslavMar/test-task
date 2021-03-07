@@ -7,6 +7,7 @@ body {
   width: 100%;
   min-height: 100%;
   margin: 0;
+  overflow-x: hidden;
 }
 
 * {
@@ -98,13 +99,40 @@ ul {
       border-color: $green;
     }
   }
+
+  &-full {
+    @include _767 {
+      width: 100%;
+      margin: 0 0 30px;
+      justify-content: center;
+    }
+  }
+
+  &-hide {
+    @include _767 {
+      display: none;
+    }
+  }
 }
 
 .main {
   padding: 120px 20px 50px;
+
+  @include _1024-768 {
+    padding: 85px 40px 80px;
+  }
+
+  @include _767 {
+    padding: 50px 10px 40px;
+  }
 }
 
 .list-line {
+  @include _1024 {
+    display: flex;
+    overflow: hidden;
+  }
+
   &_link {
     padding-left: 50px;
     font-size: $h3-4-font-size;
@@ -117,6 +145,11 @@ ul {
     margin-bottom: 30px;
     color: $grey;
 
+    @include _1024 {
+      padding-left: 0;
+      margin-right: 20px;
+      white-space: nowrap;
+    }
 
     &:before {
       position: absolute;
@@ -128,6 +161,10 @@ ul {
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+
+      @include _1024 {
+        display: none;
+      }
     }
 
     &:hover {
