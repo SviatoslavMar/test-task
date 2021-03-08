@@ -18,11 +18,19 @@
     max-width: 1017px;
     width: 100%;
 
+    @include _1024 {
+      width: 90%;
+    }
+
     img {
       max-width: 396px;
       width: 100%;
       border-radius: 35px;
       z-index: 1;
+
+      @include _1024 {
+        display: none;
+      }
     }
   }
 
@@ -33,6 +41,11 @@
     margin: 11px 0 11px -20px;
     padding: 50px 40px 50px 85px;
     position: relative;
+
+    @include _1024 {
+      border-radius: 35px;
+      padding: 30px;
+    }
   }
 
   &-title {
@@ -41,6 +54,10 @@
     line-height: 1.8;
     color: $black;
     margin-bottom: 20px;
+
+    @include _1024 {
+      font-size: $p-font-size;
+    }
   }
 
   &-text {
@@ -50,6 +67,10 @@
     color: $black;
     padding: 0;
     margin-bottom: 40px;
+
+    @include _1024 {
+      font-size: $copy-font-size;
+    }
   }
 
   &-close {
@@ -59,6 +80,11 @@
     width: 44px;
     height: 44px;
     cursor: pointer;
+
+    @include _1024 {
+      top: 10px;
+      right: 10px;
+    }
 
     &:before,
     &:after {
@@ -95,7 +121,7 @@
     max-width: 253px;
     padding: 15px 20px;
     margin-bottom: 9px;
-    border: none;
+    border: 0;
     box-shadow: 0 0 1px #052953;
     border-radius: 10px;
     font-size: $p-font-size;
@@ -104,6 +130,10 @@
 
     &::placeholder {
       color: $input-color;
+    }
+
+    &:focus {
+      border: 1px solid $green;
     }
   }
 

@@ -117,6 +117,10 @@
       font-family: $font-body;
       color: $grey;
       text-align: left;
+
+      @include _767 {
+        font-size: $copy-font-size;
+      }
     }
   }
 }
